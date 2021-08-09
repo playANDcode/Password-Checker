@@ -2,7 +2,9 @@ import re
 import time
 
 def min_max_characters(password):
-    min_char = 8;       max_char = 20;      n = len(password)
+    min_char = 8
+    max_char = 20
+    n = len(password)
     if n >= min_char and max_char >= n:
         return True
     elif n > max_char:
@@ -21,7 +23,6 @@ def one_uppercase_letter(password):
         return False
 
 def one_digit(password):
-    # b variable because first letter of boolean is b
     b = any([l.isdigit() for l in password])
     if b == True:
         return True
@@ -45,7 +46,7 @@ def check_password(password_here):
     return all(data)
 
 def animate_text(t):
-    # For visual only, doesn't work in console unfortunately.
+    # For visual only, doesn't work in console
     for letter in t:
         print(letter, end='')
         time.sleep(0.1)
