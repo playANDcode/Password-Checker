@@ -14,7 +14,6 @@ def min_max_characters(password):
     return False
         
 def one_uppercase_letter(password):
-    # b variable because first letter of boolean is b
     b = any([l.isupper() for l in password])
     if b == True:
         return True
@@ -33,7 +32,7 @@ def one_digit(password):
 def one_character(password):
     special_char = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
     if(special_char.search(password) != None):
-        return True # If it contains special characters
+        return True
     else:
         print("At least one speci@l character")
         return False
